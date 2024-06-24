@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.navbar-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.free-workshop {
+    background-color: transparent;
+    border: 1px solid #f44336;
+    color: #f44336;
+}
+
+.enroll-now {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s;
+    }
+    .nav-links.open {
+        left: 0;
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .navbar-buttons {
+        flex-direction: column;
+    }
+    .navbar-buttons button {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .menu-icon {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s;
+    }
+    .nav-links.open {
+        left: 0;
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .navbar-buttons {
+        flex-direction: column;
+    }
+    .navbar-buttons button {
+        margin: 10px 0;
+    }
+}
